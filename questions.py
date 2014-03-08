@@ -129,7 +129,7 @@ def get_quartile_markers(x, y):
 def p_n():
     d = get_cached("part_m", p_m)
     res = []
-    for di in d[1:]:
+    for di in d[1:]: # k = 2 is not nice
         k, (x, y) = di
         res.append((k, get_quartile_markers(x, y)))
     return zip(*res)
@@ -148,7 +148,7 @@ def part_p():
     res = []
     for k, pl in m:
         qs, fracs = pl
-        res.append((k, ([(i - 0.5) / sqrt(k) + 0.5 for i in qs], fracs)))
+        res.append((k, ([(i - 0.5) * sqrt(k) + 0.5 for i in qs], fracs)))
     return res
 
 if __name__ == "__main__":

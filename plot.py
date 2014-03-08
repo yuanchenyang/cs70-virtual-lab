@@ -99,7 +99,7 @@ def part_l(data):
     P.xlabel("$k$")
 
 def p_m(data):
-    for d in data[1:]: # Do not include k=2
+    for d in data: #Slice data to not include k = 2
         k, (x, y) = d
         P.plot(x, y, label="k = "+str(k))
     P.plot(x, y)
@@ -119,7 +119,7 @@ def part_n(data):
     P.plot(x, q50, label = "50th Quartile")
     P.plot(x, q75, label = "75th Quartile")
     P.legend(loc="lower right")
-    P.xscale('log')
+    #P.xscale('log')
     P.ylabel("Value of $q$ for quartile markers")
     P.xlabel("$k$")
 
@@ -145,6 +145,7 @@ def part_p(data):
     p_m(data)
     P.ylabel("Fraction of $m$ runs where $R \leq q$")
     P.xlabel("Scaled $q$")
+    P.xlim([-1,2])
 
 def hist_plot(data, bins=None):
     if bins is None:
