@@ -99,7 +99,7 @@ def part_l(data):
     P.xlabel("$k$")
 
 def p_m(data):
-    for d in data:
+    for d in data[1:]: # Do not include k=2
         k, (x, y) = d
         P.plot(x, y, label="k = "+str(k))
     P.plot(x, y)
