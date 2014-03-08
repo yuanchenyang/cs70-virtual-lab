@@ -1,0 +1,6 @@
+.DS_Store
+part_*.pdf
+*~
+data.pkl
+*.pyc
+__pycache__
