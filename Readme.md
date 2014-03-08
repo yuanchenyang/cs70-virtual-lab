@@ -22,3 +22,7 @@ To clean all generated files, run:
 ```
 make clean
 ```
+
+How it works
+-------------
+questions.py generates the data, and writes it into data.pkl. plot.py reads the data and plots it.
