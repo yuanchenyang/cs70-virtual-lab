@@ -120,7 +120,6 @@ def part_n(data):
     P.plot(x, q75, label = "75th Quartile")
     P.legend(loc="lower right")
     P.xscale('log')
-    P.xlim([10, 100000])
     P.ylabel("Value of $q$ for quartile markers")
     P.xlabel("$k$")
 
