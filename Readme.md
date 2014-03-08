@@ -25,4 +25,6 @@ make clean
 
 How it works
 -------------
-questions.py generates the data, and writes it into data.pkl. plot.py reads the data and plots it.
+questions.py generates the data, and writes it into data.pkl. 
+
+plot.py reads the data and plots it.
